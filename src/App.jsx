@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ImageCard from './components/ImageCard';
 import ScoreBoard from './components/ScoreBoard';
-import MyComponent from './components/MyComponent';
+import MyComponent from './components/MyComponents';
 import shuffleArray from './utils/shuffleArray';
-import images from './data/images';
+import images from './images';
 
 function App() {
   const [score, setScore] = useState(0);
