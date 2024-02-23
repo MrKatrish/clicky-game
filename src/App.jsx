@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import ImageCard from './components/ImageCard';
 import ScoreBoard from './components/ScoreBoard';
-import MyComponent from './components/MyComponents';
 import shuffleArray from './utils/shuffleArray';
-import images from './images';
 
 function App() {
+
+  const imagePaths = [];
+  for (let i = 1; i <= 12; i++) {
+    imagePaths.push(new URL(`./images/character${i}.jpg`, import.meta.url).href);
+  }
+
+
+  const [allImages, setAllImages] = useState(shuffleArray(imagePaths));
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [clickedImages, setClickedImages] = useState([]);
-  const [allImages, setAllImages] = useState(shuffleArray(images));
 
   useEffect(() => {
-    setAllImages(shuffleArray(images));
+    setAllImages(shuffleArray(imagePaths)); // use imagePaths instead of images
   }, [score]);
 
   const handleImageClick = (id) => {
@@ -31,11 +36,10 @@ function App() {
 
   return (
     <div>
-      <MyComponent /> {/* Positioned based on your layout needs */}
       <ScoreBoard score={score} highScore={highScore} />
       <div>
-        {allImages.map((image) => (
-          <ImageCard key={image.id} image={image} onClick={() => handleImageClick(image.id)} />
+        {allImages.map((src, index) => (
+          <ImageCard key={index} src={src} onClick={() => handleImageClick(index)} />
         ))}
       </div>
     </div>
