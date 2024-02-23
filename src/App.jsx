@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ImageCard from './components/ImageCard';
 import ScoreBoard from './components/ScoreBoard';
 import shuffleArray from './utils/shuffleArray';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 function App() {
 
@@ -17,7 +19,7 @@ function App() {
   const [clickedImages, setClickedImages] = useState([]);
 
   useEffect(() => {
-    setAllImages(shuffleArray(imagePaths)); // use imagePaths instead of images
+    setAllImages(shuffleArray(imagePaths));
   }, [score]);
 
   const handleImageClick = (id) => {
@@ -35,14 +37,28 @@ function App() {
   };
 
   return (
-    <div>
-      <ScoreBoard score={score} highScore={highScore} />
-      <div>
-        {allImages.map((src, index) => (
-          <ImageCard key={index} src={src} onClick={() => handleImageClick(index)} />
-        ))}
+
+    <div className="container bg-gray">
+    <div className="row my-4">
+      <div className="col-12 text-center">
+        <h1 className="game-title">Clicky Game - Can you beat it?</h1>
       </div>
     </div>
+<div className="container">
+  <div className="row my-4">
+    <div className="col-12">
+      <ScoreBoard score={score} highScore={highScore} />
+    </div>
+  </div>
+  <div className="row">
+    {allImages.map((src, index) => (
+      <div key={index} className="col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center">
+        <ImageCard src={src} onClick={() => handleImageClick(index)} />
+      </div>
+    ))}
+  </div>
+</div>
+</div>
   );
 }
 
