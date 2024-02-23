@@ -1,7 +1,7 @@
 // ImageCard.test.jsx
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import ImageCard from './ImageCard';
+import ImageCard from '../ImageCard';
 
 describe('ImageCard', () => {
   it('displays the image correctly', () => {

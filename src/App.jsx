@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ImageCard from './components/ImageCard';
 import ScoreBoard from './components/ScoreBoard';
-import shuffleArray from './utils/shuffleArray'; // You'll write this utility function to shuffle images
-import images from './data/images'; // Assume this is an array of image objects
+import MyComponent from './components/MyComponent';
+import shuffleArray from './utils/shuffleArray';
+import images from './data/images';
 
 function App() {
   const [score, setScore] = useState(0);
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div>
+      <MyComponent /> {/* Positioned based on your layout needs */}
       <ScoreBoard score={score} highScore={highScore} />
       <div>
         {allImages.map((image) => (
