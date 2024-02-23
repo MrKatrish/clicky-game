@@ -1,53 +1,82 @@
 # Clicky Game
 
+![GitHub](https://img.shields.io/github/license/MrKatrish/clicky-game)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/MrKatrish/clicky-game)
+![GitHub top language](https://img.shields.io/github/languages/top/MrKatrish/clicky-game)
+
 ## Overview
 
-For this activity, you'll create a memory game with React. This activity will require you to break up your application's UI into components, manage component state, and respond to user events.
+The Clicky Game is a React application designed to test and enhance memory skills. Users are presented with a grid of images, and their objective is to click on each image only once. The game keeps track of the user's score and shuffles the images after every click. This project focuses on building a memory game using React components, managing component state, and handling user events.
 
-### Instructions
+## Table of Contents
 
-1. Check out the [example solution](https://clicky-game.netlify.com/) and study the app's basic functionality.
+- [Overview](#overview)
+- [Instructions](#instructions)
+- [Demo and Screenshots](#demo-and-screenshots)
+- [Features](#features)
+- [Acknowledgements](#acknowledgements)
+- [Technologies Used](#technologies-used)
+- [Bonus](#bonus)
+- [Hints](#hints)
+- [Commits](#commits)
+- [License](#license)
 
-2. Create a new React application using [Vite](https://vitejs.dev/).
+## Instructions
 
-3. The application should render different images (of your choice) to the screen. Each image should listen for click events.
+To set up and run the Clicky Game, follow these steps:
 
-4. The application should keep track of the user's score. The user's score should be incremented when clicking an image for the first time. The user's score should be reset to 0 if they click the same image more than once.
+1. Clone the repository to your local machine using `git clone https://github.com/yourusername/clicky_game.git`.
+2. Navigate to the cloned directory and set up a new React application using Vite.
+3. Customize the images rendered by the application, replacing them with images of your choice.
+4. Implement the logic to track the user's score, ensuring it increments when clicking on an image for the first time and resets to 0 if the same image is clicked more than once.
+5. Shuffle the images after each click to provide a new challenge to the user.
+6. Deploy the application to Netlify or your preferred hosting service.
 
-5. Every time an image is clicked, the images rendered to the page should shuffle themselves in a random order.
+## Demo and Screenshots
 
-6. Once the user's score is reset after an incorrect guess, the game should restart.
+[DEMO.webm](https://github.com/yourusername/clicky_game/demo/demo.webm)
 
-7. When complete, deploy the application to Netlify.
+![Screenshot](https://github.com/yourusername/clicky_game/screenshots/screenshot.png)
 
-### Bonus
+## Features
 
-To challenge yourself:
+- Interactive memory game with React
+- Score tracking system
+- Image shuffling after each click
+- User-friendly interface
 
-1. Build the application using React Hooks
+## Acknowledgements
 
-2. Build the application from a Behavior-Driven Development Perspective
+This project was made possible thanks to the following:
 
-### Hints
+- React community for providing valuable resources and support.
+- Netlify for hosting the application.
+- All contributors who tested the application and provided feedback.
 
-* Begin by building a non-functioning static version for your Clicky Game. Then work on making the game interactive.
+## Technologies Used
 
----
+- React
+- Vite
+- HTML
+- CSS
 
-### Commits
+## Bonus
 
-As a reminder having an active and healthy commit history on GitHub is important for your future job search. It is also extremely important for making sure your work is saved in your repository. If something breaks, committing often ensures you are able to go back to a working version of your code.
+To further challenge yourself, consider implementing the following:
 
-* Committing often is a signal to employers that you are actively working on your code and learning.
+- Build the application using React Hooks for state management.
+- Approach the development from a Behavior-Driven Development (BDD) perspective, focusing on writing tests before implementing functionality.
 
-  * We use the mantra “commit early and often.”  This means that when you write code that works, add it and commit it!
+## Hints
 
-  * Numerous commits allow you to see how your app is progressing and give you a point to revert to if anything goes wrong.
+Start by creating a static version of the Clicky Game without any functionality. Once you have the basic layout and components in place, gradually add interactivity and logic to make the game fully functional.
 
-* Be clear and descriptive in your commit messaging.
+## Commits
 
-  * When writing a commit message, avoid vague messages like "fixed." Be descriptive so that you and anyone else looking at your repository knows what happened with each commit.
+Maintain an active and descriptive commit history throughout the development process. Commit frequently to ensure your progress is saved and to provide checkpoints for potential troubleshooting or rollbacks.
 
----
+## License
 
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+This project is licensed under the [MIT License](LICENSE).
+
+© 2024 Your Name. All Rights Reserved.
