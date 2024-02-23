@@ -1,11 +1,11 @@
-// App.test.jsx
-import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import App from '..App/App';
+import App from '../App';
 
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByText(/Score:/i)).toBeInTheDocument();
+    const scoreElements = screen.queryAllByText(/Score:/i);
+    // Assert that there is only one element with the text "Score:"
+    expect(scoreElements.length).toBe(1);
   });
 });

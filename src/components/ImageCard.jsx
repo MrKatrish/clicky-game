@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ImageCard = ({ src, onClick }) => {
+const ImageCard = ({ src, alt, onClick }) => {
   return (
     <img 
       src={src} 
-      alt="Character" 
+      alt={alt} 
       className="img-thumbnail custom-image-class"
       onClick={onClick} 
     />
