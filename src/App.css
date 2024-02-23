@@ -57,3 +57,29 @@
   margin-bottom: 1rem; 
   color: #343a40; 
 }
+
+.feedback-message {
+  font-size: 1.5em;
+  color: #007bff; /* Adjust color based on your design */
+  margin-bottom: 20px;
+}
+
+.image-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake-animation {
+  animation: shake 0.5s ease-in-out;
+}
